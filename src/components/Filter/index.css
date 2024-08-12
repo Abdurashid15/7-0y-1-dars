@@ -5,7 +5,10 @@ body {
     margin: 0;
     padding: 0;
   }
-  
+  .free{
+    display: flex;
+    flex-direction: column;
+  }
   .container {
     max-width: 1200px;
     margin: 20px auto;
@@ -150,5 +153,21 @@ body {
     margin: 0 15px 15px;
   }
   .price{
+    margin: 10px auto;
     width: 400px;
+    display: block;
+  }
+  .reset{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #af09cc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .slider-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }

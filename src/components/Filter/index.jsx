@@ -126,15 +126,9 @@ const ProductFilter = () => {
           </select>
         </div>
 
-        <label className="free"> Free Shipping
-        </label>
-        <input
-          type="checkbox"
-          checked={freeShipping}
-          onChange={() => setFreeShipping(!freeShipping)}
-        />
 
-        <div>
+        <div className='slider-btn'>
+          <div className="slider">
           <label className='price' >Price Range: ${minPrice} - ${maxPrice}</label>
           <input
             type="range"
@@ -154,9 +148,18 @@ const ProductFilter = () => {
             style={{ margin: '0 10px' }}
             className="filter-input slider"
           />
-        </div>
+          </div>
+          <label className="free"> Free Shipping
+          
+          <input
+            type="checkbox"
+            checked={freeShipping}
+            onChange={() => setFreeShipping(!freeShipping)}
+          />
+          </label>
         <button onClick={handleFilter} className="filter-btn">Submit</button>
-        <button onClick={handleReset} className="filter-btn">Reset</button>
+        <button onClick={handleReset} className="reset">Reset</button>
+        </div>
       </div>
       {isFiltered && (
         <div className="products-container">
